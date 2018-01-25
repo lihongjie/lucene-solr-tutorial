@@ -18,12 +18,12 @@ public class SolrCellDemo {
         ContentStreamUpdateRequest req = new ContentStreamUpdateRequest("/update/extract");
         File file = new File("d://chinese-japan.pdf");
 
-        String contentType="application/pdf";
+        String contentType="application/octet-stream";
         req.addFile(file, contentType);
 
         // if id value is exist, update the document.
 
-        req.setParam(ExtractingParams.LITERALS_PREFIX + "id", "doc2");
+        req.setParam(ExtractingParams.LITERALS_PREFIX + "id", "doc3");
 
         // 不添加的话不会及时放到索引中去
         req.setAction(AbstractUpdateRequest.ACTION.COMMIT, true, true);
