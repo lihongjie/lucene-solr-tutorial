@@ -16,14 +16,14 @@ public class SolrCellDemo {
     public static void main(String[] args) throws IOException, SolrServerException {
         SolrClient client = new HttpSolrClient.Builder("http://192.168.31.23:8983/solr/jcg").build();
         ContentStreamUpdateRequest req = new ContentStreamUpdateRequest("/update/extract");
-        File file = new File("d://chinese-japan.pdf");
+        File file = new File("d://test.pdf");
 
         String contentType="application/octet-stream";
         req.addFile(file, contentType);
 
         // if id value is exist, update the document.
 
-        req.setParam(ExtractingParams.LITERALS_PREFIX + "id", "doc3");
+        req.setParam(ExtractingParams.LITERALS_PREFIX + "id", "doc4");
 
         // 不添加的话不会及时放到索引中去
         req.setAction(AbstractUpdateRequest.ACTION.COMMIT, true, true);
