@@ -122,7 +122,7 @@ public class SolrSearchServiceImpl implements SearchService {
 
     private List<FacetFieldEntry> convertFacetFieldToEntry(FacetField facetField, String filterItem) {
 
-        List<FacetFieldEntry> fieldEntries = new ArrayList<FacetFieldEntry>();
+        List<FacetFieldEntry> fieldEntries = new ArrayList<>();
 
         for (FacetField.Count count : facetField.getValues()) {
             fieldEntries.add(new FacetFieldEntry.Builder()

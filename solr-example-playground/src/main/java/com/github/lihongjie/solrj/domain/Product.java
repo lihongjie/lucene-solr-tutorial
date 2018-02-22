@@ -7,6 +7,10 @@ import java.util.List;
 
 import static com.github.lihongjie.solrj.domain.ProductField.*;
 
+/**
+ * Solr techproducts domain
+ * @author lihongjie
+ */
 public class Product {
 
     @Field(ID_FIELD)
@@ -15,6 +19,12 @@ public class Product {
     @Field(NAME_FIELD)
     private String name; // 名称
 
+    private String pre;
+
+    private String sku;
+
+
+
     @Field("manu")
     private String manu; // 生产厂商
 
@@ -22,7 +32,7 @@ public class Product {
     private String manuId; // 生产厂商别名
 
     @Field(CATEGORY_FIELD)
-    private List<String> categories; // 产品分类
+    private List<String> categories; // 产品分类cat
 
     @Field("features")
     private List<String> features; //功能
@@ -50,6 +60,35 @@ public class Product {
 
     @Field("manufacturedate_dt")
     private Date manuFactureDate; // 生产日期
+
+    private String title;
+
+    private String subject;
+
+    private String description;
+
+    private String comments;
+
+    private String author;
+
+    private String keywords;
+
+    private String category;
+
+    private String resourcename;
+
+    private String url;
+
+    private String contentType;
+
+    private Date lastModified;
+
+    private String links;
+
+    private String content;
+
+
+
 
 
     public String getId() {

@@ -12,7 +12,7 @@ public class SingletonRemoteServerFactory implements ServerFactory {
 
     public SolrClient getSolrClientServer() {
 
-        return new HttpSolrClient("http://192.168.31.122:8983/solr/techproducts");
+        return new HttpSolrClient("http://192.168.31.23:8983/solr/techproducts");
     }
 
     @Deprecated

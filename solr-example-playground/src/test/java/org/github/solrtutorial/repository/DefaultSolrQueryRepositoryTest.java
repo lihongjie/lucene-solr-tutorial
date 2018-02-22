@@ -33,7 +33,7 @@ public class DefaultSolrQueryRepositoryTest extends AbstractJUnit4SpringContextT
     @Autowired
     private DefaultSolrQueryRepository solrQueryRepository;
 
-    private SolrClient client = new HttpSolrClient("http://localhost:8983/solr/techproducts");
+    private SolrClient client = new HttpSolrClient("http://192.168.31.23:8983/solr/techproducts");
 
     @Test
     public void testQueryWithCursors() throws IOException, SolrServerException {

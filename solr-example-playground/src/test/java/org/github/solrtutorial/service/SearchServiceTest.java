@@ -20,7 +20,7 @@ import java.util.List;
 
 public class SearchServiceTest {
 
-    private SolrClient client = new HttpSolrClient("http://localhost:8983/solr/techproducts");
+    private SolrClient client = new HttpSolrClient("http://192.168.31.23:8983/solr/techproducts");
 
     private static ObjectMapper objectMapper;
 
